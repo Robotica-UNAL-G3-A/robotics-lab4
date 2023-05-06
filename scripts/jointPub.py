@@ -3,6 +3,7 @@ from std_msgs.msg import String
 from sensor_msgs.msg import JointState
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 from numpy import pi
+import numpy as np
 
 # 0 -> 150
 # 1 -> 200
@@ -19,7 +20,8 @@ def joint_publisher():
         state.joint_names = ["joint_1","joint_2","joint_3","joint_4","joint_5"]
         point = JointTrajectoryPoint()
         select_position = int(input(" Enter desired position:  \n"))
-        point.positions = pi/180.0*choose_position(select_position)
+        pos_deg = choose_position(select_position)
+        point.positions = list(np.multiply(pi/180.0,pos_deg))
 
         point.time_from_start = rospy.Duration(0.5)
         state.points.append(point)
@@ -30,12 +32,13 @@ def joint_publisher():
         rospy.sleep(1)
 def choose_position(select_position):
     
-    PHome = [  0,  0,   0,  0, 0]
-    P0 =  [  0,  0,   0,  0, 0]
-    P1 =  [-25, 15, -20, 20, 0]
-    P2 =  [ 35,-35, 30, -30, 0]
-    P3 =  [ -85, 20, -55, 17, 0]
-    P5 =  [-80, 35, -55, 45, 0]
+    PHome = np.array([  0,  0,   0,  0, 0])
+    P1 =  PHome  + np.array([  0,  0,   0,  0, 0])
+    P2 =  PHome + np.array([-25, 15, -20, 20, 0])
+    P3 =  PHome + np.array([ 35,-35, 30, -30, 0])
+    P4 =  PHome + np.array([-85, 20, -55, 17, 0])
+    P5 =  PHome + np.array([-80, 35, -55, 45, 0])
+    
     if(select_position==1) :
         return P1
     elif(select_position==2):
