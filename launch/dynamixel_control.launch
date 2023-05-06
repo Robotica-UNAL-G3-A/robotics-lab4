@@ -1,31 +1,44 @@
 <launch>
-  <!-- Argumentos -->
-  <arg name="model" default="$(find px_robot)/urdf/px_collision.urdf"/>
-  <arg name="gui" default="true" />
-  <arg name="rvizconfig" default="$(find px_robot)/config/config.rviz" />
-  
-  <!-- Carga el robot -->
-  <param name="robot_description" command="$(find xacro)/xacro $(arg model)"/>
+  <!-- Port -->
+  <arg name="usb_port"                default="/dev/ttyUSB0"/>
+  <!-- Dynamixel FTDI baudrate -->
+  <arg name="dxl_baud_rate"           default="1000000"/>
+  <!-- Nodes Namespace -->
+  <arg name="namespace"               default="dynamixel_workbench"/>
+  <!-- Mics options -->
+  <arg name="use_moveit"              default="false"/>
+  <arg name="use_joint_state"         default="true"/>
+  <arg name="use_cmd_vel"             default="false"/>
 
-  <!-- Carga el servidor de parametros para publicar el estado del robot -->
-  <node 
-  name="robot_state_publisher" 
-  pkg="robot_state_publisher" 
-  type="robot_state_publisher" />
+  <!-- Load the motors configuration -->
+  <param name="dynamixel_info"          value="$(find dynamixel_one_motor)/config/basic.yaml"/>
   
-  <!-- Carga el manejador de juntas -->
-  <node if="$(arg gui)" 
-  name="joint_state_publisher" 
-  pkg="joint_state_publisher_gui" 
-  type="joint_state_publisher_gui" />
+  <node name="$(arg namespace)" pkg="dynamixel_workbench_controllers" type="dynamixel_workbench_controllers"
+        required="true" output="screen" args="$(arg usb_port) $(arg dxl_baud_rate)">
+    <param name="use_moveit"              value="$(arg use_moveit)"/>
+    <param name="use_joint_states_topic"  value="$(arg use_joint_state)"/>
+    <param name="use_cmd_vel_topic"       value="$(arg use_cmd_vel)"/>
+    <rosparam>
+      publish_period: 0.010
+      dxl_read_period: 0.010
+      dxl_write_period: 0.010
+      mobile_robot_config:                <!--this values will be set when 'use_cmd_vel' is true-->
+        seperation_between_wheels: 0.160  <!--default value is set by reference of TB3-->
+        radius_of_wheel: 0.033            <!--default value is set by reference of TB3-->
+    </rosparam>
+    <remap from="/dynamixel_workbench/joint_trajectory" to="joint_trajectory"/>
+  </node>
   
-  <node unless="$(arg gui)" 
-  name="joint_state_publisher" 
-  pkg="joint_state_publisher" 
-  type="joint_state_publisher" />
+  <node name="joint_publisher" pkg="robotics-lab4" type="jointPub.py">
+  </node>
+  <node name="joint_listener" pkg="robotics-lab4" type="jointSub.py">
+  </node>
 
-  <!-- Carga Rvix con config -->
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
-  <!-- <node name="rviz" pkg="rviz" type="rviz" /> -->
+  <!--
+  <node name="joint_publisher" pkg="dynamixel_one_motor" type="/joint_trajectory">
+  </node>
+  <node name="joint_listener" pkg="dynamixel_one_motor" type="/dynamixel_workbench/joint_states">
+  </node>
+  -->
 
 </launch>
