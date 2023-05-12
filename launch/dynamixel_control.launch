@@ -11,7 +11,7 @@
   <arg name="use_cmd_vel"             default="false"/>
 
   <!-- Load the motors configuration -->
-  <param name="dynamixel_info"          value="$(find dynamixel_one_motor)/config/basic.yaml"/>
+  <param name="dynamixel_info"          value="$(find robotics-lab4)/config/basic.yaml"/>
   
   <node name="$(arg namespace)" pkg="dynamixel_workbench_controllers" type="dynamixel_workbench_controllers"
         required="true" output="screen" args="$(arg usb_port) $(arg dxl_baud_rate)">
@@ -31,14 +31,15 @@
   
   <node name="joint_publisher" pkg="robotics-lab4" type="jointPub.py">
   </node>
-  <node name="joint_listener" pkg="robotics-lab4" type="jointSub.py">
+  <node name="joint_listener" pkg="robotics-lab4" type="jointSub.py" >
   </node>
-
+  
   <!--
-  <node name="joint_publisher" pkg="dynamixel_one_motor" type="/joint_trajectory">
+  <node name="rqt_gui" pkg="rqt_gui" type="rqt_gui"/>
+ 
+  <node name="joint_publisher" pkg="robotics-lab4" type="jointPub.py" output="screen">
   </node>
-  <node name="joint_listener" pkg="dynamixel_one_motor" type="/dynamixel_workbench/joint_states">
-  </node>
+  <node name="joint_listener" pkg="robotics-lab4" type="jointSub.py" output="screen">
   -->
 
 </launch>
