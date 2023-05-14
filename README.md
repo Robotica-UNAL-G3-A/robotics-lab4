@@ -93,4 +93,5 @@ usbipd wsl attach --busid=<BUSID>
 [^troubleshooting-video]:[dynamixel troubleshooting video ](https://www.youtube.com/watch?v=LN2XjlSr1kM&t=94s)
 [^id-setting]:[setting id dynamixel](https://forum.robotis.com/t/setting-id-s-on-your-new-dynamixel/723)
 - [rqt gui tutorial](https://github.com/ChoKasem/rqt_tut)
+[^callback]:[rqt buttons callbacks](https://answers.ros.org/question/195152/how-to-add-callbacks-for-a-qtwidget-in-ros/)
 

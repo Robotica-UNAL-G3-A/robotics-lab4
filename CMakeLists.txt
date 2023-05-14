@@ -161,6 +161,7 @@ catkin_install_python(PROGRAMS
   scripts/jointSrv.py
   scripts/jointSub.py
   scripts/jointPub.py
+  scripts/dinamixelDummy.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

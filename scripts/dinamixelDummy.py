@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import rospy
 from std_msgs.msg import String
 from sensor_msgs.msg import JointState
@@ -5,36 +7,44 @@ from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 from numpy import pi
 import numpy as np
 
-def dinamixel_dummy():
-    rospy.init_node('dinamixel_dummy', anonymous=False)
+class dinamixel_dummy():
+    def __init__(self):
+        
+        self.jTrajecSub = rospy.Subscriber('/joint_trajectory', JointTrajectory, self.trajec_callback)
+        
+        self.jStatePub = rospy.Publisher("/dynamixel_workbench/joint_states", JointState,queue_size=0)
+        rospy.loginfo("dinamixel dummy start")
+        #rospy.spin()
     
-    jTrajecSub = rospy.Subscriber('/joint_trajectory', JointTrajectory, callback)
-    
-    jStatePub = rospy.Publisher("/dynamixel_workbench/joint_states", JointState,queue_size=0)
-
-    while not rospy.is_shutdown():
-        pass
-    #rospy.spin()
+        while not rospy.is_shutdown():
+            
+            #rospy.sleep(1)
+            pass
     
 
-def callback(traject_msg):
-    state_msg = JointState()
-    state_msg.header.stamp = rospy.Time.now()
+    def trajec_callback(self,traject_msg):
+        print(traject_msg)
+        pos = traject_msg.points[0].positions
+        state_msg = JointState()
+        state_msg.header.stamp = rospy.Time.now()
 
-    state_msg.name = "dummy dinamixel"
-    state_msg.position = [ 1, 2, 3, 4, 5]
-    state_msg.velocity = [ 0, 0, 0, 0, 0]
-    state_msg.effort = [ 0, 0, 0]
+        state_msg.name = "dummy dinamixel"
+        state_msg.position = pos
+        state_msg.velocity = [ 0, 0, 0, 0, 0]
+        state_msg.effort = [ 0, 0, 0]
 
-    jStatePub.publish(state_msg)
-    
-    print(state_msg)
+        self.jStatePub.publish(state_msg)
+        print(state_msg)
+        print(state_msg)
 
     
 
 
 if __name__ == '__main__':
+    
+    rospy.init_node('dinamixel_dummy',anonymous=False)
     try:
-        dinamixel_dummy()
+        
+        node_dummy = dinamixel_dummy()
     except rospy.ROSInterruptException:
         pass
