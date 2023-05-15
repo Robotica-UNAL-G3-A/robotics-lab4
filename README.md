@@ -98,12 +98,38 @@ Using the axis systems, we create the DH-table.
 
 ## Positions
 
-Here we can compare the theorical position and the position made by the robot: 
+Here we can compare the theorical position and the position made by the robot. 
+
+### Position 1: Home Position
+
+The q values: [0 0 0 0 0]
 
 ![capture robotStudio signal creation](/media/P1.png)
+
+### Position 2
+
+The q values: [-25, 15, -20, 20, 0]
+
 ![capture robotStudio signal creation](/media/P2.png)
+
+### Position 3
+
+The q values: [35,-35, 30, -30, 0]
+
 ![capture robotStudio signal creation](/media/P3.png)
+
+
+### Position 4
+
+The q values: [-85, 20, -55, 17, 0]
+
 ![capture robotStudio signal creation](/media/P4.png)
+
+
+### Position 5
+
+The q values: [-80, 35, -55, 45, 0]
+
 ![capture robotStudio signal creation](/media/P5.png)
 
 ## Video: Robot and interface working
