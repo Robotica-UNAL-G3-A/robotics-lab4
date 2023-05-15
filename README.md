@@ -100,38 +100,95 @@ Using the axis systems, we create the DH-table.
 
 Here we can compare the theorical position and the position made by the robot. 
 
-### Position 1: Home Position
 
-The q values: [0, 0, 0, 0, 0]
-
-![capture robotStudio signal creation](/media/P1.png)
-
-### Position 2
-
-The q values: [-25, 15, -20, 20, 0]
-
-![capture robotStudio signal creation](/media/P2.png)
-
-### Position 3
-
-The q values: [35,-35, 30, -30, 0]
-
-![capture robotStudio signal creation](/media/P3.png)
-
-
-### Position 4
-
-The q values: [-85, 20, -55, 17, 0]
-
-![capture robotStudio signal creation](/media/P4.png)
-
-
-### Position 5
-
-The q values: [-80, 35, -55, 45, 0]
-
-![capture robotStudio signal creation](/media/P5.png)
-
+<table style="width:100%">
+  <tr>
+    <th>Estimated toolbox position</th>
+    <th>Real robot position </th>
+  </tr>
+  
+  <tr>
+    <td> Position 1: Home Position </td>
+    <td> The q values: [0, 0, 0, 0, 0] </td>
+  </tr>  
+  <tr>
+    <td>
+    <a href="https://github.com/Robotica-UNAL-G3-A/robotics-lab4/edit/main/README.md" target="_blank"> 
+        <img align = "center" alt="notebook cover" width="500" src="./media/P1.png" /> 
+    </a>
+    </td>  
+    <td>
+    <a href="https://github.com/Robotica-UNAL-G3-A/robotics-lab4/edit/main/README.md" target="_blank"> 
+        <img align = "center" alt="notebook cover" width="500" src="./media/P1R.png" /> 
+    </a>
+    </td>
+  </tr>
+  
+   <tr>
+    <td> Position 2 </td>
+    <td> The q values: [-25, 15, -20, 20, 0] </td>
+  </tr>  
+   <tr>
+    <td>
+    <a href="https://github.com/Robotica-UNAL-G3-A/robotics-lab4/edit/main/README.md" target="_blank"> 
+        <img align = "center" alt="notebook cover" width="500" src="./media/P2.png" /> 
+    </a>
+    </td>  
+    <td>
+    <a href="https://github.com/Robotica-UNAL-G3-A/robotics-lab4/edit/main/README.md" target="_blank"> 
+        <img align = "center" alt="notebook cover" width="500" src="./media/P2R.png" /> 
+    </a>
+    </td>
+   </tr>  
+    <tr>
+      <td> Position 3 </td>
+      <td> The q values: [35,-35, 30, -30, 0] </td>
+    </tr>   
+    <tr>
+      <td>
+      <a href="https://github.com/Robotica-UNAL-G3-A/robotics-lab4/edit/main/README.md" target="_blank"> 
+          <img align = "center" alt="robot P3" width="500" src="./media/P3.png" /> 
+      </a>
+      </td>  
+      <td>
+      <a href="https://github.com/Robotica-UNAL-G3-A/robotics-lab4/edit/main/README.md" target="_blank"> 
+          <img align = "center" alt="notebook cover" width="500" src="./media/P3R.png" /> 
+      </a>
+      </td>
+    </tr>
+    <tr>
+      <td> Position 4 </td>
+      <td> The q values: [-85, 20, -55, 17, 0]</td>
+    </tr>   
+    <tr>
+      <td>
+      <a href="https://github.com/Robotica-UNAL-G3-A/robotics-lab4/edit/main/README.md" target="_blank"> 
+          <img align = "center" alt="robot P3" width="500" src="./media/P4.png" /> 
+      </a>
+      </td>  
+      <td>
+      <a href="https://github.com/Robotica-UNAL-G3-A/robotics-lab4/edit/main/README.md" target="_blank"> 
+          <img align = "center" alt="notebook cover" width="500" src="./media/P4R.png" /> 
+      </a>
+      </td>
+    </tr>
+    <tr>
+      <td> Position 5</td>
+      <td> The q values: [-80, 35, -55, 45, 0]</td>
+    </tr>   
+    <tr>
+      <td>
+      <a href="https://github.com/Robotica-UNAL-G3-A/robotics-lab4/edit/main/README.md" target="_blank"> 
+          <img align = "center" alt="robot P3" width="500" src="./media/P5.png" /> 
+      </a>
+      </td>  
+      <td>
+      <a href="https://github.com/Robotica-UNAL-G3-A/robotics-lab4/edit/main/README.md" target="_blank"> 
+          <img align = "center" alt="notebook cover" width="500" src="./media/P5R.png" /> 
+      </a>
+      </td>
+    </tr>
+</table>
 ## Video: Robot and interface working
 [![Alt text](https://img.youtube.com/vi/Cl9zSiiRBXo/0.jpg)](https://www.youtube.com/watch?v=Cl9zSiiRBXo)
 
