@@ -77,7 +77,12 @@ usbipd wsl --help
 usbipd wsl list
 usbipd wsl attach --busid=<BUSID>
 ```
-
+## Positions
+![capture robotStudio signal creation](/media/P1.png)
+![capture robotStudio signal creation](/media/P2.png)
+![capture robotStudio signal creation](/media/P3.png)
+![capture robotStudio signal creation](/media/P4.png)
+![capture robotStudio signal creation](/media/P5.png)
 ## Conclusions 
 
 
