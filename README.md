@@ -90,7 +90,7 @@ Once the home position is defined, we proceed with the following steps:
 
 The resulting schematics: 
 
-![capture robotStudio signal creation](/media/DK.png)
+![capture robotStudio signal creation](/media/DK.png) 
 
 Using the axis systems, we create the DH-table.
 
@@ -98,14 +98,20 @@ Using the axis systems, we create the DH-table.
 
 ## Positions
 
+Here we can compare the theorical position and the position made by the robot: 
+
 ![capture robotStudio signal creation](/media/P1.png)
 ![capture robotStudio signal creation](/media/P2.png)
 ![capture robotStudio signal creation](/media/P3.png)
 ![capture robotStudio signal creation](/media/P4.png)
 ![capture robotStudio signal creation](/media/P5.png)
 
+## Video: Robot and interface working
+
 ## Conclusions 
 
+- Learning to use RQT (tools from ROS for GUI) was a important challenge during the practice. 
+- We explore another tools to simplify the development of the GUI (in this case QT Framework). 
 
 ## Contributors
 - [Juan Sebastian Duenas](https://github.com/jsduenass) (jsduenass@unal.edu.co)
