@@ -78,14 +78,32 @@ usbipd wsl list
 usbipd wsl attach --busid=<BUSID>
 ```
 ## Direct Kinematics
+
+To begin constructing the direct kinematics, we must first define the home position. To simplify the process, we align the robot in a straight position.
+
+Once the home position is defined, we proceed with the following steps:
+
+- Define an axis for each articulation.
+- Construct perpendicular lines that are shared by each pair of articulations.
+- Define a z-axis for each axis.
+- Define an x-axis along the perpendicular lines, following the DH-hypothesis.
+
+The resulting schematics: 
+
 ![capture robotStudio signal creation](/media/DK.png)
+
+Using the axis systems, we create the DH-table.
+
 ![capture robotStudio signal creation](/media/Ta.png)
+
 ## Positions
+
 ![capture robotStudio signal creation](/media/P1.png)
 ![capture robotStudio signal creation](/media/P2.png)
 ![capture robotStudio signal creation](/media/P3.png)
 ![capture robotStudio signal creation](/media/P4.png)
 ![capture robotStudio signal creation](/media/P5.png)
+
 ## Conclusions 
 
 
