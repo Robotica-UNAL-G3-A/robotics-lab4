@@ -94,7 +94,7 @@ The resulting schematics:
 
 Using the axis systems, we create the DH-table.
 
-![capture robotStudio signal creation](/media/Ta.png)
+![capture robotStudio signal creation](/media/Ta.png) width="600"
 
 ## Positions
 
