@@ -79,6 +79,7 @@ usbipd wsl attach --busid=<BUSID>
 ```
 ## Direct Kinematics
 ![capture robotStudio signal creation](/media/DK.png)
+![capture robotStudio signal creation](/media/Ta.png)
 ## Positions
 ![capture robotStudio signal creation](/media/P1.png)
 ![capture robotStudio signal creation](/media/P2.png)
