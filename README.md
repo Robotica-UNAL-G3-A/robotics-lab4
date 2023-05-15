@@ -106,7 +106,6 @@ Here we can compare the theorical position and the position made by the robot.
     <th>Estimated toolbox position</th>
     <th>Real robot position </th>
   </tr>
-  
   <tr>
     <td> Position 1: Home Position </td>
     <td> The q values: [0, 0, 0, 0, 0] </td>
@@ -119,7 +118,7 @@ Here we can compare the theorical position and the position made by the robot.
     </td>  
     <td>
     <a href="https://github.com/Robotica-UNAL-G3-A/robotics-lab4/edit/main/README.md" target="_blank"> 
-        <img align = "center" alt="notebook cover" width="500" src="./media/P1R.png" /> 
+        <img align = "center" alt="notebook cover" width="500" src="./media/P1_R.jpg" /> 
     </a>
     </td>
   </tr>
@@ -136,7 +135,7 @@ Here we can compare the theorical position and the position made by the robot.
     </td>  
     <td>
     <a href="https://github.com/Robotica-UNAL-G3-A/robotics-lab4/edit/main/README.md" target="_blank"> 
-        <img align = "center" alt="notebook cover" width="500" src="./media/P2R.png" /> 
+        <img align = "center" alt="notebook cover" width="500" src="./media/P2_R.jpg" /> 
     </a>
     </td>
    </tr>  
@@ -152,7 +151,7 @@ Here we can compare the theorical position and the position made by the robot.
       </td>  
       <td>
       <a href="https://github.com/Robotica-UNAL-G3-A/robotics-lab4/edit/main/README.md" target="_blank"> 
-          <img align = "center" alt="notebook cover" width="500" src="./media/P3R.png" /> 
+          <img align = "center" alt="notebook cover" width="500" src="./media/P3_R.jpg" /> 
       </a>
       </td>
     </tr>
@@ -168,7 +167,7 @@ Here we can compare the theorical position and the position made by the robot.
       </td>  
       <td>
       <a href="https://github.com/Robotica-UNAL-G3-A/robotics-lab4/edit/main/README.md" target="_blank"> 
-          <img align = "center" alt="notebook cover" width="500" src="./media/P4R.png" /> 
+          <img align = "center" alt="notebook cover" width="500" src="./media/P4_R.jpg" /> 
       </a>
       </td>
     </tr>
@@ -184,11 +183,12 @@ Here we can compare the theorical position and the position made by the robot.
       </td>  
       <td>
       <a href="https://github.com/Robotica-UNAL-G3-A/robotics-lab4/edit/main/README.md" target="_blank"> 
-          <img align = "center" alt="notebook cover" width="500" src="./media/P5R.png" /> 
+          <img align = "center" alt="notebook cover" width="500" src="./media/P5_R.jpg" /> 
       </a>
       </td>
     </tr>
 </table>
+
 ## Video: Robot and interface working
 [![Alt text](https://img.youtube.com/vi/Cl9zSiiRBXo/0.jpg)](https://www.youtube.com/watch?v=Cl9zSiiRBXo)
 
