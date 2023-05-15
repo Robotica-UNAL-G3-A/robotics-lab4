@@ -133,6 +133,7 @@ The q values: [-80, 35, -55, 45, 0]
 ![capture robotStudio signal creation](/media/P5.png)
 
 ## Video: Robot and interface working
+[![Alt text](https://img.youtube.com/vi/g3UhogHW9Vw/0.jpg)](https://www.youtube.com/watch?v=g3UhogHW9Vw)
 
 ## Conclusions 
 
