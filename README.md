@@ -102,7 +102,7 @@ Here we can compare the theorical position and the position made by the robot.
 
 ### Position 1: Home Position
 
-The q values: [0 0 0 0 0]
+The q values: [0, 0, 0, 0, 0]
 
 ![capture robotStudio signal creation](/media/P1.png)
 
